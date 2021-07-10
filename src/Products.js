@@ -12,8 +12,13 @@ function Products () {
   return <section className="products"> 
     <ProductsInfo />
 
-    {data.map(RenderProducts)}
+    <div className="container">
+    <div id="products-row" className="row">
 
+    {data.map(RenderProducts)}
+    
+    </div>
+    </div>
   </section>
 }
 

@@ -1,9 +1,7 @@
 import React from 'react';
 
 function RenderProducts (data) {
-    return <div className="container">
-              <div id="products-row" className="row">
-                <div className="pricing-column col-lg-4 col-md-6 mb-4">
+    return   <div className="pricing-column col-lg-4 col-md-6 mb-4">
                   <div className="card-deck mb-3 text-center">
                    <div className="card mb-4 shadow-sm">
                       <a href="#!">
@@ -28,8 +26,7 @@ function RenderProducts (data) {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              
     }
 
 export default RenderProducts;
