@@ -10,7 +10,7 @@ function RenderProducts (data) {
                       <img
                       className="card-img-top product-image"
                       src={data.image}
-                      alt="Hieno perho"
+                      alt={data.description}
                       />
                       </a>
                       <div className="card-body">
