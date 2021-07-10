@@ -1,4 +1,3 @@
-import './App.css';
 import Header from './Header.js'
 import Products from './Products.js'
 import Cart from './Cart.js'

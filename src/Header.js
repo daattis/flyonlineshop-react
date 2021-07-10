@@ -2,11 +2,11 @@ import React from 'react';
 import './styles.css';
 
 function Header () {
-    return <section class="title">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand navbar-titletext" href="">Nordic spey shop</a>
+    return <section className="title">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a className="navbar-brand navbar-titletext" href="/">Nordic spey shop</a>
       <button
-        class="navbar-toggler"
+        className="navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -14,19 +14,19 @@ function Header () {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"></span>
       </button>
 
       <div
-        class="collapse navbar-collapse justify-content-end"
+        className="collapse navbar-collapse justify-content-end"
         id="navbarSupportedContent"
       >
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#readmore">Read more</a>
+        <ul className="navbar-nav ml-auto">
+          <li className="nav-item">
+            <a className="nav-link" href="#readmore">Read more</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#cart">My Cart</a>
+          <li className="nav-item">
+            <a className="nav-link" href="#cart">My Cart</a>
           </li>
         </ul>
       </div>
