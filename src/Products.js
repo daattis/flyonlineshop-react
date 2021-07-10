@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.css';
 import data from './productdata.js'
 import ProductsInfo from './ProductsInfo'
-import RenderProducts from './RenderProducts'
+import ProductCard from './ProductCard'
 
 
 //this is the entire products-section
@@ -15,8 +15,8 @@ function Products () {
     <div className="container">
     <div id="products-row" className="row">
 
-    {data.map(RenderProducts)}
-    
+    {data.map(ProductCard)}
+
     </div>
     </div>
   </section>

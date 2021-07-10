@@ -1,6 +1,6 @@
 import React from 'react';
 
-function RenderProducts (data) {
+function ProductCard (data) {
     return   <div className="pricing-column col-lg-4 col-md-6 mb-4">
                   <div className="card-deck mb-3 text-center">
                    <div className="card mb-4 shadow-sm">
@@ -26,7 +26,6 @@ function RenderProducts (data) {
                     </div>
                   </div>
                 </div>
-              
     }
 
-export default RenderProducts;
+export default ProductCard;
