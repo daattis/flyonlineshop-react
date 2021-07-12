@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.css';
 
 function Newsletter() {
-    return <section class="newsletter text-center" id="newsletter">
+    return <section className="newsletter text-center" id="newsletter">
       
     <div className="pricing-header form-signin px-3 py-3 pt-md-5 pb-md-4 mx-auto">
       <h1 className="mb-3 font-weight-normal">Newsletter Signup</h1>

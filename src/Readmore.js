@@ -1,8 +1,8 @@
 import React from 'react';
 import './styles.css';
 
-function Readmore() {
-    return  <section class="readmore" id="readmore">
+function ReadMore() {
+    return  <section className="readmore" id="readmore">
    <hr />
    <div className=" pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
    <h1 className="display-4">Read more</h1>
@@ -17,4 +17,4 @@ function Readmore() {
   </section>
 }
 
-export default Readmore;
+export default ReadMore;

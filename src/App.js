@@ -1,7 +1,7 @@
 import Header from './Header.js'
 import Products from './Products.js'
 import Cart from './Cart.js'
-import Readmore from './Readmore.js'
+import ReadMore from './ReadMore.js'
 import Footer from './Footer.js'
 import Newsletter from './Newsletter.js'
 
@@ -10,7 +10,7 @@ function App() {
     <Header />
     <Products />
     <Cart />
-    <Readmore />
+    <ReadMore />
     <Newsletter />
     <Footer />
   </div>

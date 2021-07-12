@@ -1,8 +1,10 @@
 import React from 'react';
 import './styles.css';
 
+
 function Cart () {
-    return <section class="cart" id="cart">
+
+    return <section className="cart" id="cart">
     <div className="pricing-header px-3 py-3 pt-md-4 pb-md-4 mx-auto text-center">
       <h1 className="display-4">My Cart</h1>
       <p className="lead">Below lies the products of your choosing. <br /></p>
@@ -12,7 +14,7 @@ function Cart () {
         <span className="cart-price cart-header cart-column">PRICE</span>
         <span className="cart-quantity cart-header cart-column">QUANTITY</span>
       </div>
-
+ 
       <div className="cart-items"></div>
 
       <div className="cart-total">
