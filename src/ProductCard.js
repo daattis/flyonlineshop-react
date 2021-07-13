@@ -8,21 +8,21 @@ function ProductCard(data) {
   function addToCart (product) {
     setCart([...cart, product]);
     
-    return (
+    return <div>
       {cart.map((product) => {
         return (
-        <Cart 
-          id={product.id}
-          title={product.title}
-          src={product.src}
-          price={product.price} />
+          <Cart 
+            id={product.id}
+            title={product.title}
+            src={product.src}
+            price={product.price} />
         )
-      })}
-      )
+      })}</div>
+      
     }
 
   return (
-    <div key={data.id} className="pricing-column col-lg-4 col-md-6 mb-4">
+    <div key={data.key} className="pricing-column col-lg-4 col-md-6 mb-4">
       <div className="card-deck mb-3 text-center">
         <div className="card mb-4 shadow-sm">
           <a href="#!">

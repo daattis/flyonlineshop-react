@@ -15,7 +15,7 @@ function Products () {
     <div className="container">
     <div id="products-row" className="row">
 
-    {data.map(ProductCard)}
+    {data.map(product => <ProductCard key={product.id} product={product} />)}
 
     </div>
     </div>
