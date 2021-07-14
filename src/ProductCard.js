@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Cart from "./Cart";
 
-function ProductCard(data) {
+const ProductCard = ({product}) => {
 
   const [cart, setCart] = useState([]);
 
@@ -22,27 +22,27 @@ function ProductCard(data) {
     }
 
   return (
-    <div key={data.key} className="pricing-column col-lg-4 col-md-6 mb-4">
+    <div className="pricing-column col-lg-4 col-md-6 mb-4">
       <div className="card-deck mb-3 text-center">
         <div className="card mb-4 shadow-sm">
           <a href="#!">
             <img
               className="card-img-top product-image"
-              src={data.image}
-              alt={data.description}
+              src={product.image}
+              alt={product.description}
             />
           </a>
           <div className="card-body">
             <h4 className="card-title">
-              <a href="#!">{data.title}</a>
+              <a href="#!">{product.title}</a>
             </h4>
-            <h5 className="product-price">{data.price}</h5>
-            <p className="card-text">{data.description}</p>
+            <h5 className="product-price">{product.price}</h5>
+            <p className="card-text">{product.description}</p>
             <button
-              id={data.id}
+              id={product.id}
               type="button"
               className="addtocart btn btn-lg btn-block btn-outline-primary"
-              onClick={() => addToCart(data)}
+              onClick={() => addToCart(product)}
             >
               Add to cart
             </button>
