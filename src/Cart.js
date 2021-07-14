@@ -1,8 +1,10 @@
 import React from 'react';
+import CartRow from './CartRow';
 import './styles.css';
 
 
 function Cart () {
+// renders the entire My Cart -section
 
     return <section className="cart" id="cart">
     <div className="pricing-header px-3 py-3 pt-md-4 pb-md-4 mx-auto text-center">
@@ -15,7 +17,9 @@ function Cart () {
         <span className="cart-quantity cart-header cart-column">QUANTITY</span>
       </div>
  
-      <div className="cart-items"></div>
+      <div className="cart-items">
+        <CartRow />
+      </div>
 
       <div className="cart-total">
         <strong className="cart-total-title">Total</strong>

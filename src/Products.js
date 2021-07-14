@@ -7,7 +7,7 @@ import ProductCard from './ProductCard'
 
 //this is the entire products-section
 
-function Products () {
+function Products ({ onAddToCart }) {
     
   return <section className="products"> 
     <ProductsInfo />
@@ -15,7 +15,7 @@ function Products () {
     <div className="container">
     <div id="products-row" className="row">
 
-    {data.map(product => <ProductCard key={product.id} product={product} />)}
+    {data.map(product => <ProductCard key={product.id} product={product} onAddToCart={onAddToCart}/>)}
 
     </div>
     </div>

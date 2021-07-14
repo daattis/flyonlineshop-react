@@ -1,27 +1,9 @@
-import React, { useState } from "react";
-import Cart from "./Cart";
+import React from "react";
 
-const ProductCard = ({product}) => {
 
-  const [cart, setCart] = useState([]);
+const ProductCard = ({product, onAddToCart}) => {
 
-  function addToCart (product) {
-    setCart([...cart, product]);
-    
-    return <div>
-      {cart.map((product) => {
-        return (
-          <Cart 
-            id={product.id}
-            title={product.title}
-            src={product.src}
-            price={product.price} />
-        )
-      })}</div>
-      
-    }
-
-  return (
+return (
     <div className="pricing-column col-lg-4 col-md-6 mb-4">
       <div className="card-deck mb-3 text-center">
         <div className="card mb-4 shadow-sm">
@@ -42,7 +24,7 @@ const ProductCard = ({product}) => {
               id={product.id}
               type="button"
               className="addtocart btn btn-lg btn-block btn-outline-primary"
-              onClick={() => addToCart(product)}
+              onClick={() => onAddToCart(product)}
             >
               Add to cart
             </button>
