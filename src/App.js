@@ -27,9 +27,10 @@ function App() {
 
   const onAddToCart = (product) => {
 
-    //unfinished
-{/*   cart.includes(product.id) ? console.log("nope") : console.log("yis") */}
-
+    // check to see if the product is already in the cart
+    cart.filter((product) => {
+        return cart.length > 0
+        }) 
       setCart([...cart, product]);
       
 } 
