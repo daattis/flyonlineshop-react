@@ -28,9 +28,10 @@ function App() {
   const onAddToCart = (product) => {
 
     //unfinished
-{/*    cart.includes(product.id) ? console.log("nope") : console.log("yis") */}
+{/*   cart.includes(product.id) ? console.log("nope") : console.log("yis") */}
 
       setCart([...cart, product]);
+      
 } 
 
  const onRemoveFromCart = (product) => {
@@ -41,8 +42,10 @@ function App() {
     setCart(currentCart)
  }
  const onCheckOut = () => {
-    alert("Thank you for your purchase.");
-    setCart([]);
+    if (cart !== []) {
+      alert("Thank you for your purchase.");
+      setCart([]);
+    }  
  }
 
   return <div>

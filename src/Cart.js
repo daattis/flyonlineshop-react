@@ -40,7 +40,11 @@ function Cart ({ cart, cartTotal, onRemoveFromCart, onCheckOut }) {
       </div>
 
       <div className="checkout">
-        <button onClick={() => {onCheckOut()}} type="button" className="btn-lg btn-ligth checkout-btn" id="checkout-btn">
+        <button 
+          onClick={() => {onCheckOut()}} 
+          type="button" 
+          className={cartTotal > 0 ? "btn-lg btn-warning checkout-btn" : "btn-lg btn-ligth checkout-btn"}
+          id="checkout-btn">
           Continue to checkout
         </button>
       </div>
