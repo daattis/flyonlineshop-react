@@ -9,11 +9,11 @@ import React, { useState } from 'react'
 
 function App() {
 
+  // The cart
   const [cart, setCart] = useState([]);
 
   const onAddToCart = (product) => {
       setCart([...cart, product]);
-      console.log(cart);  
   } 
 
   return <div>

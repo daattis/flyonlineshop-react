@@ -1,8 +1,10 @@
 import React from 'react';
 import './styles.css';
+import CartRow from './CartRow';
 
 
-function Cart () {
+
+function Cart ({ cart }) {
 // renders the entire My Cart -section
 
     return <section className="cart" id="cart">
@@ -17,8 +19,8 @@ function Cart () {
       </div>
  
       <div className="cart-items">
-      {/* // cartrow here */} 
 
+      <CartRow cart={cart}/> 
 
       </div>
 
