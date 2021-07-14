@@ -6,12 +6,14 @@ import Footer from './Footer.js'
 import Newsletter from './Newsletter.js'
 import React, { useState } from 'react'
 
+
 function App() {
 
   const [cart, setCart] = useState([]);
 
   const onAddToCart = (product) => {
-    console.log("Clicked le button");
+      setCart([...cart, product]);
+      console.log(cart);  
   } 
 
   return <div>

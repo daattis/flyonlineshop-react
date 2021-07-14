@@ -1,5 +1,4 @@
 import React from 'react';
-import CartRow from './CartRow';
 import './styles.css';
 
 
@@ -18,7 +17,9 @@ function Cart () {
       </div>
  
       <div className="cart-items">
-        <CartRow />
+      {/* // cartrow here */} 
+
+
       </div>
 
       <div className="cart-total">
