@@ -14,12 +14,13 @@ function App() {
 
   const onAddToCart = (product) => {
       setCart([...cart, product]);
+      
   } 
 
   return <div>
     <Header />
     <Products onAddToCart={onAddToCart} />
-    <Cart cart={cart}/>
+    <Cart cart={cart} />
     <ReadMore />
     <Newsletter />
     <Footer />

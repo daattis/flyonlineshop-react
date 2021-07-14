@@ -20,7 +20,13 @@ function Cart ({ cart }) {
  
       <div className="cart-items">
 
-      <CartRow cart={cart}/> 
+      {cart.map((product) => {
+          return <CartRow 
+                image={product.image}
+                title={product.title}
+                price={product.price}
+              /> 
+        })}
 
       </div>
 
