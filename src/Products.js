@@ -15,7 +15,13 @@ function Products ({ onAddToCart }) {
     <div className="container">
     <div id="products-row" className="row">
 
-    {data.map(product => <ProductCard key={product.id} product={product} onAddToCart={onAddToCart}/>)}
+    {data.map(product => 
+      <ProductCard 
+        key={product.id} 
+        product={product} 
+        onAddToCart={onAddToCart} 
+        
+        />)}
 
     </div>
     </div>

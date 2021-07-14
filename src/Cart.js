@@ -4,7 +4,7 @@ import CartRow from './CartRow';
 
 
 
-function Cart ({ cart }) {
+function Cart ({ cart, cartTotal, onRemoveFromCart, onCheckOut }) {
 // renders the entire My Cart -section
 
     return <section className="cart" id="cart">
@@ -21,10 +21,14 @@ function Cart ({ cart }) {
       <div className="cart-items">
 
       {cart.map((product) => {
-          return <CartRow 
+        
+        return <CartRow 
+                key={product.id}
                 image={product.image}
                 title={product.title}
                 price={product.price}
+                onRemoveFromCart={onRemoveFromCart}
+                product={product}
               /> 
         })}
 
@@ -32,11 +36,11 @@ function Cart ({ cart }) {
 
       <div className="cart-total">
         <strong className="cart-total-title">Total</strong>
-        <span className="cart-total-price">0.00 €</span>
+        <span className="cart-total-price">{cartTotal} €</span>
       </div>
 
       <div className="checkout">
-        <button type="button" className="btn-lg btn-ligth checkout-btn" id="checkout-btn">
+        <button onClick={() => {onCheckOut()}} type="button" className="btn-lg btn-ligth checkout-btn" id="checkout-btn">
           Continue to checkout
         </button>
       </div>
