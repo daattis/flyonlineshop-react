@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.css';
 
 
-const CartRow = ({ image, title, price, onRemoveFromCart, product, onModifyCartAmount, productQuantity }) => {
+const CartRow = ({ image, title, price, onRemoveFromCart, product, onModifyCartAmount }) => {
 
     return <div className="cart-row">
     <div className="cart-item cart-column check-cart-item">
@@ -17,7 +17,7 @@ const CartRow = ({ image, title, price, onRemoveFromCart, product, onModifyCartA
     </div>
     <span className="cart-price cart-column">{price} €</span>
     <div className="cart-quantity cart-column">
-        <input className="quantity-inp" type="number" value={productQuantity} onChange={() => {onModifyCartAmount(product)}} />
+        <input className="quantity-inp" type="number"  onChange={() => {onModifyCartAmount(product)}} />
         <button 
             className="btn btn-danger" 
             type="button" 

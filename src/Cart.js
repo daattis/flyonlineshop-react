@@ -4,7 +4,7 @@ import CartRow from './CartRow';
 
 
 
-function Cart ({ cart, cartTotal, onRemoveFromCart, onCheckOut, onModifyCartAmount, productQuantity }) {
+function Cart ({ cart, cartTotal, onRemoveFromCart, onCheckOut, onModifyCartAmount }) {
 // renders the entire My Cart -section
 
     return <section className="cart" id="cart">
@@ -30,7 +30,7 @@ function Cart ({ cart, cartTotal, onRemoveFromCart, onCheckOut, onModifyCartAmou
                 onRemoveFromCart={onRemoveFromCart}
                 product={product}
                 onModifyCartAmount={onModifyCartAmount}  
-                productQuantity={productQuantity}
+                
               /> 
         })}
 

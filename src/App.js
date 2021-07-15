@@ -12,7 +12,7 @@ function App() {
   // The cart
   const [cart, setCart] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
-  const [productQuantity, setProductQuantity] = useState(1);
+  const [productQuantity, setProductQuantity] = useState(0);
 
   useEffect(() => {
     calculateTotal();
@@ -21,13 +21,14 @@ function App() {
   const calculateTotal = () => {
     let totalValue = 0;
     for (let i = 0; i < cart.length; i++) {
-      totalValue = totalValue + (cart[i].price * productQuantity[i]);
+      totalValue += cart[i].price ;
     }
     setCartTotal(Math.round(totalValue * 100)/100);
   }
 
   const onAddToCart = (product) => {
-    if (cart.filter(product => product.id).length > 0) {
+    console.log(cart, product, product.id);
+    if (cart.filter(p => p.id === product.id).length > 0) {
       alert("This item has already been added to the cart.")
     } else {
       setCart([...cart, product]);  
@@ -50,7 +51,9 @@ function App() {
  }
 
  const onModifyCartAmount = (product) => {
-    setProductQuantity(product.quantity);  
+  let productQuantity = 1;
+  setProductQuantity(productQuantity + 1)
+  console.log(product.id) // This works
 }
 
   return <div>
@@ -62,7 +65,7 @@ function App() {
       onRemoveFromCart={onRemoveFromCart} 
       onCheckOut={onCheckOut}
       onModifyCartAmount={onModifyCartAmount}
-      productQuantity={productQuantity}  
+      
       />
     <ReadMore />
     <Newsletter />
